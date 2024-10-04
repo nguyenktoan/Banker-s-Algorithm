@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1723</width>
+    <height>983</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="numResourceLabel">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>70</y>
+      <width>133</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Số tài nguyên</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="refreshBtn">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>130</y>
+      <width>93</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Làm mới</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="workTab">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>390</y>
+      <width>381</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: rgb(170, 170, 170)</string>
+    </property>
+   </widget>
+   <widget class="QColumnView" name="columnView_6">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>190</y>
+      <width>401</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0, 170, 255);
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QColumnView" name="columnView_2">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>350</y>
+      <width>401</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 85, 0);
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>40</y>
+      <width>271</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QRadioButton" name="noRequestBtn">
+     <property name="font">
+      <font>
+       <family>#9Slide01 Noi dung ngan</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Không nhận Request</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="reQuestBtn">
+     <property name="font">
+      <font>
+       <family>#9Slide01 Noi dung ngan</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Có nhận Request</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableWidget" name="availTable">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>230</y>
+      <width>381</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="numProcessLabel">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>32</y>
+      <width>118</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Số tiến trình</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="requestTable">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>230</y>
+      <width>381</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QColumnView" name="columnView_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>191</y>
+      <width>401</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0, 170, 255);
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="needLabel">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>360</y>
+      <width>57</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Need</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="allocationTable">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>390</y>
+      <width>381</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QColumnView" name="columnView">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>350</y>
+      <width>811</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0, 170, 255);
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+    <property name="autoScroll">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="process">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>160</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tiến trình</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="workLabel">
+    <property name="geometry">
+     <rect>
+      <x>1450</x>
+      <y>360</y>
+      <width>60</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Work</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="processcomboBox">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>200</y>
+      <width>93</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="needTable">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>390</y>
+      <width>381</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QColumnView" name="columnView_4">
+    <property name="geometry">
+     <rect>
+      <x>68</x>
+      <y>20</y>
+      <width>231</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxLabel">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>360</y>
+      <width>51</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Max</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="showResult">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>720</y>
+      <width>381</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QColumnView" name="columnView_3">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>350</y>
+      <width>411</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: beige;
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;
+background-color:rgb(170, 85, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showBtn">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>880</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Kết quả</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="avaiLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>200</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Available</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="processSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>32</y>
+      <width>51</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="startBtn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>130</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Tạo</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="requestmatrixLabel">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>190</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Request</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="resourceSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>70</y>
+      <width>51</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="maxTable">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>390</y>
+      <width>381</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color: beige;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AllotLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>360</y>
+      <width>131</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Allocation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exBtn">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>130</y>
+      <width>93</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>#9Slide01 Tieu de ngan</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Ví dụ</string>
+    </property>
+   </widget>
+   <zorder>columnView_3</zorder>
+   <zorder>columnView</zorder>
+   <zorder>columnView_5</zorder>
+   <zorder>columnView_4</zorder>
+   <zorder>numResourceLabel</zorder>
+   <zorder>refreshBtn</zorder>
+   <zorder>workTab</zorder>
+   <zorder>columnView_6</zorder>
+   <zorder>columnView_2</zorder>
+   <zorder>splitter</zorder>
+   <zorder>availTable</zorder>
+   <zorder>numProcessLabel</zorder>
+   <zorder>requestTable</zorder>
+   <zorder>needLabel</zorder>
+   <zorder>allocationTable</zorder>
+   <zorder>process</zorder>
+   <zorder>workLabel</zorder>
+   <zorder>processcomboBox</zorder>
+   <zorder>needTable</zorder>
+   <zorder>maxLabel</zorder>
+   <zorder>showResult</zorder>
+   <zorder>showBtn</zorder>
+   <zorder>avaiLabel</zorder>
+   <zorder>processSpinbox</zorder>
+   <zorder>startBtn</zorder>
+   <zorder>requestmatrixLabel</zorder>
+   <zorder>resourceSpinbox</zorder>
+   <zorder>maxTable</zorder>
+   <zorder>AllotLabel</zorder>
+   <zorder>exBtn</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1723</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
